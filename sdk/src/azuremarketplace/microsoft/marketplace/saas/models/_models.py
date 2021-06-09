@@ -538,11 +538,14 @@ class SubscriptionTerm(msrest.serialization.Model):
     :type start_date: ~datetime.datetime
     :param end_date:
     :type end_date: ~datetime.datetime
+    :param term_unit:
+    :type term_unit: str
     """
 
     _attribute_map = {
         'start_date': {'key': 'startDate', 'type': 'iso-8601'},
         'end_date': {'key': 'endDate', 'type': 'iso-8601'},
+        'term_unit': {'key': 'termUnit', 'type': 'str'},
     }
 
     def __init__(
@@ -552,6 +555,7 @@ class SubscriptionTerm(msrest.serialization.Model):
         super(SubscriptionTerm, self).__init__(**kwargs)
         self.start_date = kwargs.get('start_date', None)
         self.end_date = kwargs.get('end_date', None)
+        self.term_unit = kwargs.get('term_unit', None)
 
 
 class UpdateOperation(msrest.serialization.Model):
